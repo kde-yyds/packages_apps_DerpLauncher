@@ -191,7 +191,7 @@ public final class Utilities {
     public static final String KEY_RECENTS_CHIPS = "pref_recents_chips";
     public static final String KEY_AUTO_KEYABORD = "pref_auto_keyboard";
     public static final String KEY_SMARTSPACE = "pref_smartspace";
-
+    public static final String KEY_BLUR_BACKGROUND_AT_APP_LAUNCH = "pref_blur_background_at_app_launch";
     /**
      * Returns true if theme is dark.
      */
@@ -1127,5 +1127,10 @@ public final class Utilities {
     private static boolean isSmartspaceEnabled(Context context) {
         SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_SMARTSPACE, true);
+    }
+
+    public static boolean blurBackgroundAtAppLaunch(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_BLUR_BACKGROUND_AT_APP_LAUNCH, true);
     }
 }
